@@ -18,7 +18,7 @@ AgroXAI is a state-of-the-art agricultural intelligence platform designed to pre
 
 ### 🏠 Home Dashboard
 A cinematic welcome to the future of agricultural intelligence.
-![AgroXAI Home Page](images/home.png)
+![AgroXAI Home Page](images/home.jpeg)
 
 ### 🧭 Guided Prediction
 A multi-step form process designed for precision and ease of use.
