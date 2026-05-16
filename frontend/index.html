@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroXAI | Premium Rice Yield Intelligence</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <i class="fa-solid fa-seedling"></i> AgroXAI
+        </div>
+        <div class="nav-links">
+            <a onclick="showSection('home')" id="nav-home" class="active">Home</a>
+            <a onclick="showSection('input')" id="nav-input">Prediction</a>
+            <a onclick="showSection('insights')" id="nav-insights">Insights</a>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        
+        <!-- Page 1: Home Dashboard -->
+        <section id="home" class="active">
+            <!-- Premium Hero Section -->
+            <div class="hero-premium">
+                <div class="hero-inner">
+                    <div class="hero-text-content">
+                        <div class="badge">Next-Gen Agricultural AI</div>
+                        <h1>Revolutionizing <span class="text-gradient">Rice Yield</span> through Intelligence</h1>
+                        <p class="hero-subtitle">AgroXAI leverages advanced machine learning and SHAP-based explainability to provide transparent, data-driven insights for the future of farming.</p>
+                        
+                        <div class="hero-actions">
+                            <button class="btn-primary-glow" onclick="showSection('input')">
+                                Launch Prediction <i class="fa-solid fa-bolt"></i>
+                            </button>
+                            <button class="btn-secondary-outline" onclick="showSection('insights')">
+                                Explore Insights
+                            </button>
+                        </div>
+
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">92%</span>
+                                <span class="stat-label">Prediction Accuracy</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Environmental Factors</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <div class="floating-card glass-card">
+                            <i class="fa-solid fa-leaf"></i>
+                            <div>
+                                <h4>Yield Growth</h4>
+                                <div class="mini-chart">
+                                    <div class="bar" style="height: 40%"></div>
+                                    <div class="bar" style="height: 60%"></div>
+                                    <div class="bar" style="height: 85%"></div>
+                                    <div class="bar" style="height: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-card glass-card" style="top: 60%; right: -10%;">
+                            <i class="fa-solid fa-brain" style="color: var(--primary-yellow);"></i>
+                            <div>
+                                <h4>XAI Logic</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.8;">SHAP values calculated</p>
+                            </div>
+                        </div>
+                        <div class="hero-image-placeholder">
+                            <div class="glow-effect"></div>
+                            <i class="fa-solid fa-wheat-awn-circle-exclamation"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Value Propositions -->
+            <div class="features-section">
+                <div class="section-header text-center">
+                    <span class="badge">Why AgroXAI</span>
+                    <h2>Engineered for Transparency</h2>
+                    <p>Moving beyond black-box AI to provide actionable, understandable results.</p>
+                </div>
+
+                <div class="premium-grid">
+                    <div class="premium-card">
+                        <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <h3>Advanced Regression</h3>
+                        <p>Powered by optimized XGBoost models trained on high-fidelity agricultural datasets.</p>
+                        <ul class="card-list">
+                            <li><i class="fa-solid fa-check"></i> Non-linear feature capture</li>
+                            <li><i class="fa-solid fa-check"></i> High robustness to noise</li>
+                        </ul>
+                    </div>
+
+                    <div class="premium-card highlight">
+                        <div class="card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                        <h3>SHAP Explainability</h3>
+                        <p>We don't just predict; we explain. Understand exactly which variables drive your yield.</p>
+                        <ul class="card-list">
+                            <li><i class="fa-solid fa-check"></i> Global feature importance</li>
+                            <li><i class="fa-solid fa-check"></i> Local prediction drivers</li>
+                        </ul>
+                    </div>
+
+                    <div class="premium-card">
+                        <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Decision Support</h3>
+                        <p>Turn data into strategy. Minimize risks by identifying negative environmental impacts early.</p>
+                        <ul class="card-list">
+                            <li><i class="fa-solid fa-check"></i> Risk mitigation tools</li>
+                            <li><i class="fa-solid fa-check"></i> Resource optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission Statement -->
+            <div class="mission-wrapper">
+                <div class="mission-content">
+                    <div class="mission-text">
+                        <h2>Our Mission</h2>
+                        <p>“To democratize agricultural intelligence, making the complex power of AI accessible, transparent, and actionable for every stakeholder in the rice production ecosystem.”</p>
+                    </div>
+                    <div class="mission-cta">
+                        <button class="btn-primary-glow" onclick="showSection('input')">Start Your Journey</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 2: Input Form Page -->
+        <section id="input">
+            <div class="form-container">
+                <div class="text-center">
+                    <span class="badge">Guided Analysis</span>
+                    <h2 style="color: var(--primary-green); margin-bottom: 1rem; font-size: 3.5rem;">Prediction Engine</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 3rem; font-size: 1.2rem;">Complete the steps below to generate your yield forecast.</p>
+                </div>
+
+                <!-- Step Indicator -->
+                <div class="step-indicator">
+                    <div class="step active" id="step-dot-1">
+                        <div class="dot">1</div>
+                        <span>Climate</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" id="step-dot-2">
+                        <div class="dot">2</div>
+                        <span>Agronomy</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" id="step-dot-3">
+                        <div class="dot">3</div>
+                        <span>Review</span>
+                    </div>
+                </div>
+                
+                <form id="prediction-form">
+                    <!-- Step 1: Climate -->
+                    <div class="form-step active" id="step-1">
+                        <div class="chart-card">
+                            <h3 style="color: var(--primary-green); margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1rem;">
+                                <i class="fa-solid fa-cloud-sun-rain" style="color: var(--accent-yellow);"></i> Climate Dynamics
+                            </h3>
+                            <div class="form-grid">
+                                <div class="input-group">
+                                    <label>Rainfall (mm)</label>
+                                    <input type="number" id="rainfall" placeholder="e.g., 850" required>
+                                </div>
+                                <div class="input-group">
+                                    <label>Temperature (°C)</label>
+                                    <input type="number" id="temperature" placeholder="e.g., 28.5" step="0.1" required>
+                                </div>
+                                <div class="input-group">
+                                    <label>Weather Condition</label>
+                                    <select id="weatherCondition" required>
+                                        <option value="" disabled selected>Select condition</option>
+                                        <option value="Sunny">Sunny</option>
+                                        <option value="Rainy">Rainy</option>
+                                        <option value="Cloudy">Cloudy</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Days to Harvest</label>
+                                    <input type="number" id="daysToHarvest" placeholder="e.g., 120" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-actions mt-4">
+                            <button type="button" class="btn-primary-glow" onclick="nextStep(2)">
+                                Next Step <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Agronomy -->
+                    <div class="form-step" id="step-2">
+                        <div class="chart-card">
+                            <h3 style="color: var(--primary-green); margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1rem;">
+                                <i class="fa-solid fa-tractor" style="color: var(--accent-yellow);"></i> Agronomic Profile
+                            </h3>
+                            <div class="form-grid">
+                                <div class="input-group">
+                                    <label>Region</label>
+                                    <select id="region" required>
+                                        <option value="" disabled selected>Select region</option>
+                                        <option value="North">North</option>
+                                        <option value="South">South</option>
+                                        <option value="East">East</option>
+                                        <option value="West">West</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Soil Type</label>
+                                    <select id="soilType" required>
+                                        <option value="" disabled selected>Select soil type</option>
+                                        <option value="Clay">Clay</option>
+                                        <option value="Sandy">Sandy</option>
+                                        <option value="Loam">Loam</option>
+                                        <option value="Silt">Silt</option>
+                                        <option value="Peaty">Peaty</option>
+                                        <option value="Chalky">Chalky</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Fertilizer Used</label>
+                                    <select id="fertilizerUsed" required>
+                                        <option value="True">Applied</option>
+                                        <option value="False">Not Applied</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Irrigation Used</label>
+                                    <select id="irrigationUsed" required>
+                                        <option value="True">Applied</option>
+                                        <option value="False">Not Applied</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-actions mt-4">
+                            <button type="button" class="btn-secondary-outline" onclick="nextStep(1)">
+                                <i class="fa-solid fa-arrow-left"></i> Back
+                            </button>
+                            <button type="button" class="btn-primary-glow" onclick="nextStep(3)">
+                                Review Data <i class="fa-solid fa-check-double"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Review -->
+                    <div class="form-step" id="step-3">
+                        <div class="premium-card highlight">
+                            <h3 style="margin-bottom: 1.5rem;">Ready for Analysis</h3>
+                            <p style="margin-bottom: 2.5rem; opacity: 0.9;">Please confirm all inputs are accurate. Our AI model will process this data across 10+ environmental variables to generate your yield forecast.</p>
+                            
+                            <div class="text-center" style="display: flex; gap: 2rem; justify-content: center;">
+                                <button type="button" class="btn-secondary-outline" style="color: white; border-color: white;" onclick="nextStep(2)">
+                                    <i class="fa-solid fa-arrow-left"></i> Back
+                                </button>
+                                <button type="submit" class="btn-primary-glow" id="predict-btn" style="background: var(--primary-yellow); color: var(--primary-green);">
+                                    Execute Prediction <i class="fa-solid fa-bolt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div id="output-preview" style="display: none; margin-top: 6rem; border-top: 2px dashed rgba(0,0,0,0.05); padding-top: 5rem;">
+                    <div class="prediction-card">
+                        <h2>Computed Rice Yield</h2>
+                        <div class="prediction-value">4.2 <span style="font-size: 2rem;">tons/ha</span></div>
+                        <button class="btn-primary-glow" style="margin: 3rem auto 0;" onclick="showSection('xai')">
+                            Review Explainable AI Analysis <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 3: XAI View -->
+        <section id="xai">
+            <div class="text-center" style="margin-bottom: 3rem; padding-top: 4rem;">
+                <span class="badge">Model Interpretability</span>
+                <h2 style="color: var(--primary-green); font-size: 3.5rem; margin-top: 1rem;">SHAP Intelligence</h2>
+                <p style="color: var(--text-muted); font-size: 1.3rem;">Deep-dive into the factors driving your yield forecast.</p>
+            </div>
+
+            <!-- XAI Tab Navigation -->
+            <div class="xai-tabs">
+                <button class="xai-tab-btn active" onclick="switchXaiTab('xai-summary')">
+                    <i class="fa-solid fa-gauge-high"></i> Overview
+                </button>
+                <button class="xai-tab-btn" onclick="switchXaiTab('xai-visuals')">
+                    <i class="fa-solid fa-chart-area"></i> Visual Analysis
+                </button>
+                <button class="xai-tab-btn" onclick="switchXaiTab('xai-details')">
+                    <i class="fa-solid fa-list-check"></i> Factor Breakdown
+                </button>
+            </div>
+
+            <div class="xai-tab-container">
+                <!-- Tab 1: Prediction Summary -->
+                <div class="xai-tab-content active" id="xai-summary">
+                    <div class="prediction-card">
+                        <h2>Final Yield Forecast</h2>
+                        <div class="prediction-value"><span id="res-yield">4.82</span> <span style="font-size: 2rem;">t/ha</span></div>
+                        <div style="margin-top: 2rem; font-weight: 700; color: var(--primary-green); font-size: 1.2rem;">
+                            Model Confidence: <span id="res-confidence">91.4</span>%
+                        </div>
+                    </div>
+
+                    <div class="premium-card" style="background: var(--white); border-left: 10px solid var(--primary-green);">
+                        <h3 style="color: var(--primary-green); margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
+                            <i class="fa-solid fa-robot"></i> Narrative AI Interpretation
+                        </h3>
+                        <p id="xai-text" style="font-size: 1.4rem; line-height: 1.8; font-style: italic; color: var(--text-dark);">
+                            Generating descriptive insight...
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Visual Analysis -->
+                <div class="xai-tab-content" id="xai-visuals">
+                    <div class="visuals-grid">
+                        <div class="chart-card">
+                            <h3 style="color: var(--primary-green); margin-bottom: 3rem; display: flex; align-items: center; gap: 1rem;">
+                                <i class="fa-solid fa-chart-simple" style="color: var(--accent-yellow);"></i> Feature Attribution
+                            </h3>
+                            <div style="height: 400px;">
+                                <canvas id="shapSummaryChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="chart-card">
+                            <h3 style="color: var(--primary-green); margin-bottom: 3rem; display: flex; align-items: center; gap: 1rem;">
+                                <i class="fa-solid fa-water" style="color: var(--accent-yellow);"></i> Impact Waterfall
+                            </h3>
+                            <div style="height: 400px;">
+                                <canvas id="shapWaterfallChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Detailed Factor Breakdown -->
+                <div class="xai-tab-content" id="xai-details">
+                    <h3 style="color: var(--primary-green); margin-bottom: 3rem; font-size: 2.2rem; text-align: center;">Driver Deep-Dive</h3>
+                    <div class="premium-grid">
+                        <div class="premium-card" id="card-rainfall">
+                            <div class="card-icon"><i class="fa-solid fa-droplet"></i></div>
+                            <h4 id="label-rainfall">Rainfall Impact</h4>
+                            <p style="font-weight: 700; margin: 1rem 0;" id="impact-rainfall">Positive</p>
+                            <p id="insight-rainfall">Primary growth accelerator identified for this cycle.</p>
+                        </div>
+                        <div class="premium-card" id="card-temp">
+                            <div class="card-icon"><i class="fa-solid fa-temperature-high"></i></div>
+                            <h4 id="label-temp">Thermal Stress</h4>
+                            <p style="font-weight: 700; margin: 1rem 0;" id="impact-temperature">Negative</p>
+                            <p id="insight-temperature">Temperature variances slightly restricted peak yield.</p>
+                        </div>
+                        <div class="premium-card" id="card-fert">
+                            <div class="card-icon"><i class="fa-solid fa-flask-vial"></i></div>
+                            <h4 id="label-fert">Nutrient Efficiency</h4>
+                            <p style="font-weight: 700; margin: 1rem 0;" id="impact-fertilizer">Positive</p>
+                            <p id="insight-fertilizer">Fertilizer application provided critical metabolic support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4" style="display: flex; gap: 2rem; justify-content: center; padding-bottom: 8rem; margin-top: 5rem;">
+                <button class="btn-primary-glow" onclick="window.print()">
+                    Export Report <i class="fa-solid fa-file-export"></i>
+                </button>
+                <button class="btn-secondary-outline" onclick="showSection('input')">
+                    New Prediction
+                </button>
+            </div>
+        </section>
+
+        <!-- Page 4: Insights Dashboard -->
+        <section id="insights">
+            <div class="text-center" style="margin-bottom: 6rem; padding-top: 4rem;">
+                <span class="badge">Knowledge Base</span>
+                <h1 style="color: var(--primary-green); font-size: 4rem; margin-top: 1rem;">Global Yield Insights</h1>
+                <p style="color: var(--text-muted); font-size: 1.3rem;">Macro trends and environmental patterns discovered by AgroXAI.</p>
+            </div>
+
+            <div class="premium-grid">
+                <div class="premium-card">
+                    <div class="card-icon"><i class="fa-solid fa-cloud-showers-heavy"></i></div>
+                    <h3>Precipitation Corridors</h3>
+                    <p>AgroXAI identifies 850mm-1100mm as the 'Goldilocks' zone for maximum rice grain density.</p>
+                </div>
+                <div class="premium-card highlight">
+                    <div class="card-icon"><i class="fa-solid fa-sun"></i></div>
+                    <h3>Solar Thermal Balance</h3>
+                    <p>Nighttime temperatures above 24°C lead to increased respiration and lower net yield.</p>
+                </div>
+                <div class="premium-card">
+                    <div class="card-icon"><i class="fa-solid fa-vial"></i></div>
+                    <h3>Soil pH Dynamics</h3>
+                    <p>A soil pH of 6.5 consistently yields 12% higher than acidic environments below 5.5.</p>
+                </div>
+            </div>
+
+            <div class="mission-wrapper" style="margin-top: 6rem; border-radius: 40px; padding: 5rem;">
+                <div style="text-align: center;">
+                    <h2 style="color: var(--primary-yellow); margin-bottom: 3rem; font-size: 2.5rem;">System Intelligence Metrics</h2>
+                    <div style="display: flex; justify-content: center; gap: 8rem; flex-wrap: wrap;">
+                        <div>
+                            <div style="font-size: 4rem; font-weight: 800;">92%</div>
+                            <p style="opacity: 0.8; font-weight: 700; letter-spacing: 1px;">PREDICTION R²</p>
+                        </div>
+                        <div>
+                            <div style="font-size: 4rem; font-weight: 800;">XGB</div>
+                            <p style="opacity: 0.8; font-weight: 700; letter-spacing: 1px;">CORE ENGINE</p>
+                        </div>
+                        <div>
+                            <div style="font-size: 4rem; font-weight: 800;">SHAP</div>
+                            <p style="opacity: 0.8; font-weight: 700; letter-spacing: 1px;">XAI LAYER</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4" style="padding-bottom: 8rem;">
+                <button class="btn-primary-glow" onclick="showSection('home')">
+                    Return to Mission Control <i class="fa-solid fa-house"></i>
+                </button>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
